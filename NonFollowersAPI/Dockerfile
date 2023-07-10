@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["WEGGAPI.csproj", ""]
+COPY ["WEGGAPI.csproj", "WEGGAPI.csproj"]
 RUN dotnet restore "WEGGAPI.csproj"
 COPY . .
 WORKDIR "/src"
