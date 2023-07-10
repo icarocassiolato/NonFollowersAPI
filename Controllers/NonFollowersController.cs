@@ -68,6 +68,9 @@ namespace Api.Controllers
         }
 
         [HttpGet]
+        public async Task<string> Teste()
+            => "testeeee";
+
         public async Task<Resultado> Gerar()
         {
             var resultado = new Resultado();
