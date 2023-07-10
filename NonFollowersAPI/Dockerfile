@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 RUN dotnet restore "NonFollowersAPI.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src"
 RUN dotnet build "NonFollowersAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
